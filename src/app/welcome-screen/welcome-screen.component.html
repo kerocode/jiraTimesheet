@@ -1,0 +1,31 @@
+<div style="background: #24C6DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: 100vh;">
+  <div fxLayout="column wrap" fxLayoutAlign="center center">
+    <div style="padding:20px;">
+      <span style="color: #fff;text-align: center;font-size: 45px;text-shadow: 0px 1px 5px rgba(0,20,0,0.5);font-family: roboto;"
+        class=""> Welcome to Jira Timesheet </span>
+      <img src="./assets/clock.png" height="50px" weidth="50px" style="vertical-align: middle;margin-bottom: 1em;">
+      <div style="width:50px;height:49px;border-radius:50%;" class="logo-shadow"></div>
+
+    </div>
+    <h4 style="color:#fff;"> Please sign in with your email</h4>
+    <md-card style="width: 50%;">
+      <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" novalidate>
+        <md-form-field class="example-full-width">
+          <input mdInput placeholder="JIRA Base Url" value="" formControlName="baseUrl">
+          <md-hint align="start"><strong>https://MyCompany.atlassian.net</strong> </md-hint>
+        </md-form-field>
+        <md-form-field class="example-full-width">
+          <input mdInput placeholder="User Name" value="" formControlName="userName">
+        </md-form-field>
+        <md-form-field class="example-full-width">
+          <input mdInput placeholder="Password" id="pwd" type="password" value="" formControlName="password">
+          <md-icon (click)="changeVisibility()" mdSuffix>{{passwordIcon}}</md-icon>
+        </md-form-field>
+        <button class="welcome-button" style="test-align:center;margin: auto;display: block;">Sign in</button>
+      </form>
+    </md-card>
+  </div>
+</div>

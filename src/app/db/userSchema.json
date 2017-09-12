@@ -1,0 +1,19 @@
+{
+  "title": "user schema",
+  "version": 0,
+  "description": "it is user personnal data",
+  "type": "object",
+  "properties": {
+    "userName": {
+      "type": "string",
+      "primary": true
+    },
+    "password": {
+      "type": "string",
+      "encrypted": true
+    }
+
+
+  },
+  "required": ["password"]
+}
